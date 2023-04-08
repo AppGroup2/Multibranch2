@@ -55,6 +55,7 @@ pipeline{
           }          
           steps{
 								sh 'df -h'
+		  						sh 'whoami'
 							}
 						}
 						stage('Tunde'){
