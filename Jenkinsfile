@@ -13,10 +13,7 @@ pipeline{
 				stage('2-Group Parallel job'){
 					parallel{
 						stage('Teeto-sub-job-1'){
-							when{
-          branch 'feature'
-          }
-              steps{
+	              steps{
 								sh 'lscpu'
 								sh 'echo $SHELL'
 							}
