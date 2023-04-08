@@ -6,7 +6,7 @@ pipeline{
           branch 'dev'
           }          
           steps{
-						checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'groupgit', url: 'https://github.com/AppGroup2/jenkinsproject2.git']])
+						checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'groupgit', url: 'https://github.com/AppGroup2/Multibranch2.git']])
 
 						}	
 					}
