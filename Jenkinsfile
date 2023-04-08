@@ -14,7 +14,7 @@ pipeline{
 					parallel{
 						stage('Teeto-sub-job-1'){
 							when{
-          branch 'develop'
+          branch 'feature'
           }
               steps{
 								sh 'lscpu'
