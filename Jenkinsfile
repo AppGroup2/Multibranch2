@@ -19,6 +19,7 @@ pipeline{
               steps{
 								sh 'lscpu'
 								sh 'echo $SHELL'
+		      						sh 'echo "group2"'
 							}
 						}
 						stage('Chris'){
