@@ -54,7 +54,7 @@ pipeline{
           branch 'main'
           }          
           steps{
-								sh 'lscpu'
+								sh 'df -h'
 							}
 						}
 						stage('Tunde'){
