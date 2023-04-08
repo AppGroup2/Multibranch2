@@ -3,7 +3,7 @@ pipeline{
 		stages{
 				stage ('1-clone'){
           	when{
-          branch 'feature'
+          branch 'dev'
           }          
           steps{
 						checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'groupgit', url: 'https://github.com/AppGroup2/jenkinsproject2.git']])
@@ -13,7 +13,10 @@ pipeline{
 				stage('2-Group Parallel job'){
 					parallel{
 						stage('Teeto-sub-job-1'){
-							steps{
+							when{
+          branch 'uat'
+          }          
+          steps{
 								sh 'lscpu'
 								sh 'echo $SHELL'
 							}
@@ -47,7 +50,10 @@ pipeline{
 				stage('4-Group Parallel job'){
 					parallel{
 						stage('Olu'){
-							steps{
+							when{
+          branch 'main'
+          }          
+          steps{
 								sh 'lscpu'
 							}
 						}
